@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Mind Space</title>
+</head>
+<body> 
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-primary py-1">
+        <div class="container d-flex align-items-center justify-content-between">
+          <a class="navbar-brand p-0 m-0 me-3" href="#">
+              <img src="image/Mind_Space-removebg-preview.png" alt="Logo" class="logo-img"> 
+           </a>
+
+          <button class="navbar-toggler m-0 p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto align-items-center mb-2 mb-lg-0">
+              <li class="nav-item">
+                 <a class="nav-link active" aria-current="page" href="index.html#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html#vision">Vision</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="index.html#source">Source</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="mood.html"> Mood Tracker</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="diary.html"> Daily Diary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="contact.html"> Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center">
+
+              <a href="login.html" class="btn btn-primary rounded-pill px-4 d-flex align-items-center gap-2">
+                  <i class="fa-solid fa-right-to-bracket"></i> 
+                  Login
+              </a>
+          
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <section id="tracker" class="mood-tracker">
+        <h2>Lacak Mood Harianmu</h2>
+        <p>Memahami emosimu adalah langkah pertama untuk berkembang. Catat mood-mu hari ini!</p>
+        <div class="tracker-container">
+            <div class="mood-input">
+                <h3>Bagaimana Perasaanmu Hari Ini?</h3>
+                <select id="mood-selector">
+                    <option value="5">Sangat Baik (Awesome! 🤩)</option>
+                    <option value="4">Baik (Good 👍)</option>
+                    <option value="3" selected>Netral (Okay 👌)</option>
+                    <option value="2">Buruk (Bad 😟)</option>
+                    <option value="1">Sangat Buruk (Terrible 😭)</option>
+                </select>
+                <button id="save-mood-btn" class="btn-save">Catat Mood</button>
+                <p id="mood-message" style="margin-top: 10px; color: #0077b6;"></p>
+            </div>
+    
+            <div class="mood-chart">
+                <h3>Diagram Mood 7 Hari Terakhir</h3>
+                <canvas id="moodChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2025 Mind Space. Hak Cipta Dilindungi.</p>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Syarat Penggunaan</a> 
+            <a href="#">Kontak Kami</a>
+        </div>
+    </footer>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <script src="script.js"></script>
+    
+</body>
+</html>
