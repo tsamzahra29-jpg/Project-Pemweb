@@ -33,4 +33,4 @@ Dengan Mind Space kamu bisa berkonsultasi dengan para ahli dan memahami diri sen
 - web3forms
 
 # Screenshot tampilan
-
+Screen Shot 2026-01-06 at 20.55.54.png
