@@ -194,13 +194,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 function register() {
-    // 1. Cari elemen SAAT tombol diklik (Lebih aman)
     var x = document.getElementById("loginForm");
     var y = document.getElementById("register");
     var z = document.getElementById("btn");
     var title = document.getElementById("form-title");
 
-    // 2. Cek apakah elemen ada?
+    
     if (x && y && z && title) {
         x.style.left = "-400px";
         y.style.left = "50px";
@@ -212,13 +211,13 @@ function register() {
 }
 
 function login() {
-    // 1. Cari elemen SAAT tombol diklik
+    
     var x = document.getElementById("loginForm");
     var y = document.getElementById("register");
     var z = document.getElementById("btn");
     var title = document.getElementById("form-title");
 
-    // 2. Cek apakah elemen ada?
+    
     if (x && y && z && title) {
         x.style.left = "50px";   
         y.style.left = "450px";  
@@ -231,19 +230,19 @@ function login() {
 
 
 function prosesLogin(event) {
-    // 1. Cegah reload
+    
     event.preventDefault();
 
-    // 2. Tampilkan SweetAlert khusus Login
+    
     Swal.fire({
-        title: 'Login Berhasil!',               // Judul beda
-        text: 'Selamat datang kembali!',        // Pesan beda
+        title: 'Login Berhasil!',               
+        text: 'Selamat datang kembali!',        
         icon: 'success',
         confirmButtonText: 'Masuk ke Dashboard',
         confirmButtonColor: '#3085d6',
     }).then((result) => {
         if (result.isConfirmed) {
-            // 3. Arahkan ke halaman utama
+            
             window.location.href = "index.html"; 
         }
     });
@@ -254,17 +253,14 @@ document.addEventListener("DOMContentLoaded", function() {
     if (myContactForm) {
         
         myContactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Cegah refresh
+            event.preventDefault(); 
 
-            // Cari Modal Success Contact
-            // Pastikan ID modal di HTML Contact Us adalah 'successModal'
             var contactModalElement = document.getElementById('successModal');
             
             if (contactModalElement) {
                 var modalContact = new bootstrap.Modal(contactModalElement);
                 modalContact.show();
                 
-                // Reset form setelah submit
                 myContactForm.reset();
             } else {
                 console.warn("Modal Contact tidak ditemukan di HTML.");
@@ -273,18 +269,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
 });
-// File: script.js
 
-// File: script.js
 
 function prosesRegistrasi(event) {
-    // 1. Mencegah form reload halaman (WAJIB)
     event.preventDefault();
 
-    // Cek di console apakah fungsi terpanggil
     console.log("Fungsi registrasi berjalan...");
 
-    // 2. Tampilkan SweetAlert
+   
     Swal.fire({
         title: 'Registrasi Berhasil!',
         text: 'Selamat datang di Mind Space.',
@@ -293,13 +285,8 @@ function prosesRegistrasi(event) {
         confirmButtonColor: '#3085d6',
     }).then((result) => {
         if (result.isConfirmed) {
-            // Aksi setelah user klik tombol OK di popup
-            
-            // Opsi A: Jika ingin reload halaman agar form bersih
             window.location.href = "index.html"; 
 
-            // Opsi B: Jika ingin pindah ke tampilan login (panggil fungsi login Anda)
-            // login();
         }
     });
 }
